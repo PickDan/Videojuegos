@@ -1,6 +1,32 @@
 {
   "users": [
-
+    {
+      "email": "prueba1@draw.com",
+      "password": "$2a$10$T7uw7zzuqr9VVKpBa/OKaOE2g4XDskidDIAo7WAfHUYFsWvx7QO5W",
+      "id": 1
+    },
+    {
+      "email": "prueba2@draw.com",
+      "password": "$2a$10$wwFpsc2ZvlzAV.n3GbggSuFH12jicDhvh.oYvZo9mu7sX8pVA10XO",
+      "id": 2
+    },
+    {
+      "email": "prueba3@draw.com",
+      "password": "$2a$10$.2E7x8rNBpGUaIOYteMOFOcahCAIU6qseFBCBb/tH38NpuWX9qgya",
+      "id": 3
+    },
+    {
+      "email": "prueba4@draw.com",
+      "password": "$2a$10$cE3xZMGP3.Wxxh86f8G2XOI6CPA.v9a1rUubMWbYKZ1m5ZRtqZf8G",
+      "id": 4
+    },
+    {
+      "email": "admin1@su.com",
+      "password": "$2a$10$51YIpYTexkY0XJ1IjqYHvuhqYrvC/HyVdTU5sqdoPmiboA4W.mtRG",
+      "nombre": "Daniel",
+      "edad": "19",
+      "id": 5
+    }
   ],
   "juegos": [
     {

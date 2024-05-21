@@ -19,6 +19,7 @@ export class ProductosComponent {
       this.productos = n
     })
   }
+
   
   }
 

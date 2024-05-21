@@ -1,6 +1,13 @@
 
 <form (ngSubmit)="registrarse(datos)"  #datos="ngForm">
-
+    <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Ingrese su nombre:</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Enter name" name="nombre" [(ngModel)]="nombre">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="edad" class="form-label">Ingrese edad:</label>
+        <input type="edad" class="form-control" id="edad" placeholder="Enter age" name="edad" [(ngModel)]="edad">
+      </div>
     <div class="mb-3 mt-3">
       <label for="email" class="form-label">Ingrese dirección email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="email">
@@ -9,5 +16,6 @@
       <label for="pwd" class="form-label">Ingrese la contraseña: </label>
       <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" [(ngModel)]="password">
     </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

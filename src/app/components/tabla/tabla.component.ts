@@ -19,4 +19,8 @@ export class TablaComponent {
       this.juegos = p
     })
   }
+  agregar(){
+    console.log("Agregado");
+    
+  }
 }

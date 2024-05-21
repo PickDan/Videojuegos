@@ -16,4 +16,7 @@ export class ProductosService {
   getProductosID(id:any): Observable<any>{
     return this.http.get(`${this.API_PRODUCTOS}/${id}`)
   }
+  agregarCarrito(producto:any):Observable<any>{
+    return this.http.get(this.API_PRODUCTOS, producto)
+  }
 }
