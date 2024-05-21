@@ -18,4 +18,9 @@ export class LoginService {
   postRegistro(usuario:any):Observable<any>{
     return this.http.post(this.API_REGISTRO, usuario)
   }
+
+  private API_USUARIOS = "http://localhost:3000/users"
+  getUsuarios():Observable<any>{
+    return this.http.get(this.API_USUARIOS)
+  }
 }

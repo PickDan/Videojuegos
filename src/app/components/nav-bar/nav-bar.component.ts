@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,4 +10,12 @@ import { RouterLink } from '@angular/router';
 })
 export class NavBarComponent {
 
+    ruta = inject(Router)
+    cerrarSesion(){
+      localStorage.removeItem('token')
+      this.ruta.navigateByUrl('home')
+      
+    }
+
+    vista = localStorage.getItem('token')
 }

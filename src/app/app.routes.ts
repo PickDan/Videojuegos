@@ -11,6 +11,9 @@ import { DetallesComponent } from './components/detalles/detalles.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { carritoGuard } from './guards/carrito.guard';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { perfilGuard } from './guards/perfil.guard';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -19,10 +22,11 @@ export const routes: Routes = [
     {path: 'nosotros', component: NosotrosComponent},
     {path: 'terminos', component: TerminosComponent},
     {path: 'contactos', component: ContactosComponent},
-    {path: 'carrito', component: CarritoComponent},
+    {path: 'carrito', component: CarritoComponent, canActivate:[carritoGuard]},
     {path: 'detalles/:idDetalles', component: DetallesComponent},
     {path: 'login', component: LoginComponent},
     {path: 'registro', component: RegistroComponent},
+    {path: 'usuarios', component: UsuariosComponent, canActivate:[perfilGuard]},
 
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', component: ErrorComponent},

@@ -15,6 +15,9 @@ export class RegistroComponent {
 
   email: any
   password: any
+  //nombre:any
+  //edad:any
+  //genero:any
   token: any
 
   registrarse(datos : any){
