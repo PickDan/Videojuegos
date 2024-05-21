@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre </th>
+        <th>Precio</th>
+        <th>Genero </th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (juego of juegos; track juego) {
+      <tr>
+        <td>{{juego.id}}</td>
+        <td>{{juego.nombre}}</td>
+        <td>{{juego.precio}}</td>
+        <td>{{juego.genero}}</td>
+        <img src="{{juego.url}}" width="59px" height="100">
+        <td>
+          <button>Agregar al carrito</button>
+          <button [routerLink]="['/detalles', juego.id]">Ver detalles</button>
+        </td>
+      </tr>
+      }
+
+    </tbody>
+  </table>
+

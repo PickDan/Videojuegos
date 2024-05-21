@@ -1,0 +1,12 @@
+
+<form (ngSubmit)="registrarse(datos)"  #datos="ngForm">
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label">Ingrese dirección email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="email">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Ingrese la contraseña: </label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" [(ngModel)]="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

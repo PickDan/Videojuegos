@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "email": "prueba1@draw.com",
+      "password": "$2a$10$T7uw7zzuqr9VVKpBa/OKaOE2g4XDskidDIAo7WAfHUYFsWvx7QO5W",
+      "id": 1
+    }
+  ],
+  "juegos": [
+    {
+      "id": 1,
+      "nombre": "Call of duty",
+      "precio": 40,
+      "genero": "accion",
+      "url": "https://www.bing.com/images/search?view=detailV2&ccid=aavLqEqu&id=19363182D14F9749D3EDF8FCE270112AEFDECBB3&thid=OIP.aavLqEqu7OYoB3Zbk5PXCQHaEN&mediaurl=https%3a%2f%2ftwistedvoxel.com%2fwp-content%2fuploads%2f2022%2f05%2fcall-of-duty-modern-warfare-2-1.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.69abcba84aaeece62807765b9393d709%3frik%3ds8ve7yoRcOL8%252bA%26pid%3dImgRaw%26r%3d0&exph=1090&expw=1920&q=call+of+duty&simid=608049309804882253&FORM=IRPRST&ck=029AFF14D672A0DD9A2F7FF9FD067581&selectedIndex=2&itb=0"
+    },
+    {
+      "id": 2,
+      "nombre": "God of war",
+      "precio": 50,
+      "genero": "aventura"
+    },
+    {
+      "id": 3,
+      "nombre": "Uncharted",
+      "precio": 60,
+      "genero": "aventura"
+    },
+    {
+      "id": 4,
+      "nombre": "GTA V",
+      "precio": 30,
+      "genero": "accion"
+    },
+    {
+      "id": 5,
+      "nombre": "FiFa",
+      "precio": 30,
+      "genero": "deportes"
+    }
+  ]
+}
