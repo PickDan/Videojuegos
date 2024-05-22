@@ -14,6 +14,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { carritoGuard } from './guards/carrito.guard';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { perfilGuard } from './guards/perfil.guard';
+import { EditarComponent } from './components/editar/editar.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -22,6 +23,7 @@ export const routes: Routes = [
     {path: 'nosotros', component: NosotrosComponent},
     {path: 'terminos', component: TerminosComponent},
     {path: 'contactos', component: ContactosComponent},
+    {path: 'editar/:idEditar', component: EditarComponent},
     {path: 'carrito', component: CarritoComponent, canActivate:[carritoGuard]},
     {path: 'detalles/:idDetalles', component: DetallesComponent},
     {path: 'login', component: LoginComponent},

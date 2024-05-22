@@ -11,7 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UsuariosComponent {
     servicio = inject(LoginService)
-
+    id:any
+    nombre:any
+    edad:any
     email:any
     password:any
     usuario:any

@@ -1,4 +1,7 @@
-@for (item of usuario; track usuario) {
+@for (usuario of usuario; track usuario) {
+    <h1>id: {{usuario.id}}</h1>
+    <h1>nombre: {{usuario.nombre}}</h1>
+    <h1>edad: {{usuario.edad}}</h1>
     <h1>email: {{usuario.email}}</h1>
-<h2>password: {{usuario.password}}</h2>
+    <h2>password: {{usuario.password}}</h2>
 }

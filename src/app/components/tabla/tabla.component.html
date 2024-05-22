@@ -1,3 +1,50 @@
+@if (visualizar == 'admin') {
+<form (ngSubmit)="agregarProducto(formulario)"  #formulario="ngForm">
+  <label>Ingresar ID del videojueo</label>
+  <input type="number" name="id" [(ngModel)]="id">
+  <label>Ingresar el nombre del juego: </label>
+  <input type="text" name="nombre" [(ngModel)]="nombre">
+  <label>Ingresar el precio del juego: </label>
+  <input type="number" name="precio" [(ngModel)]="precio">
+  <label>Ingresar la categoría del juego: </label>
+  <input type="text" name="genero" [(ngModel)]="genero">
+  <label>Ingresar url del juego:</label>
+  <input type="url" name="imagen" [(ngModel)]="imagen">
+  
+  <button type="submit">Guardar revisión</button>
+</form>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre </th>
+      <th>Precio</th>
+      <th>Genero </th>
+      <th>Imagen</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+      @for (juego of juegos; track juego) {
+    <tr>
+      <td>{{juego.id}}</td>
+      <td>{{juego.nombre}}</td>
+      <td>{{juego.precio}}</td>
+      <td>{{juego.genero}}</td>
+      <img src="{{juego.url}}" width="59px" height="100">
+      <td>
+        <button class="btn btn-danger" (click)="delete(juego.id)">Eliminar</button>
+        <button class="btn btn-warning" [routerLink]="['/editar', juego.id]" >Editar</button>
+      </td>
+    </tr>
+    }
+
+  </tbody>
+</table>
+
+}@else {
+
 <table class="table table-striped">
     <thead>
       <tr>
@@ -18,7 +65,7 @@
         <td>{{juego.genero}}</td>
         <img src="{{juego.url}}" width="59px" height="100">
         <td>
-          <button (click)="agregar()">Agregar al carrito</button>
+          <button>Agregar al carrito</button>
           <button [routerLink]="['/detalles', juego.id]">Ver detalles</button>
         </td>
       </tr>
@@ -26,4 +73,5 @@
 
     </tbody>
   </table>
+}
 

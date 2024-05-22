@@ -1,32 +1,5 @@
 {
   "users": [
-    {
-      "email": "prueba1@draw.com",
-      "password": "$2a$10$T7uw7zzuqr9VVKpBa/OKaOE2g4XDskidDIAo7WAfHUYFsWvx7QO5W",
-      "id": 1
-    },
-    {
-      "email": "prueba2@draw.com",
-      "password": "$2a$10$wwFpsc2ZvlzAV.n3GbggSuFH12jicDhvh.oYvZo9mu7sX8pVA10XO",
-      "id": 2
-    },
-    {
-      "email": "prueba3@draw.com",
-      "password": "$2a$10$.2E7x8rNBpGUaIOYteMOFOcahCAIU6qseFBCBb/tH38NpuWX9qgya",
-      "id": 3
-    },
-    {
-      "email": "prueba4@draw.com",
-      "password": "$2a$10$cE3xZMGP3.Wxxh86f8G2XOI6CPA.v9a1rUubMWbYKZ1m5ZRtqZf8G",
-      "id": 4
-    },
-    {
-      "email": "admin1@su.com",
-      "password": "$2a$10$51YIpYTexkY0XJ1IjqYHvuhqYrvC/HyVdTU5sqdoPmiboA4W.mtRG",
-      "nombre": "Daniel",
-      "edad": "19",
-      "id": 5
-    }
   ],
   "juegos": [
     {
@@ -59,6 +32,13 @@
       "nombre": "FiFa",
       "precio": 30,
       "genero": "deportes"
+    },
+    {
+      "id": 6,
+      "nombre": "Spiderman",
+      "precio": 122,
+      "genero": "accion",
+      "imagen": "https://www.bing.com/images/search?view=detailV2&ccid=pvLPHWAa&id=DFF348F35B6D59055AEA94C2A5A288A17F7E5053&thid=OIP.pvLPHWAaLdEmpO69BT6XbgHaF1&mediaurl=https%3a%2f%2fpngimg.com%2fuploads%2fspider_man%2fspider_man_PNG11.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a6f2cf1d601a2dd126a4eebd053e976e%3frik%3dU1B%252bf6GIoqXClA%26pid%3dImgRaw%26r%3d0&exph=2300&expw=2917&q=spiderman&simid=608054004222932521&FORM=IRPRST&ck=5DDEF739E7572DC4D6217AC5CDAFC7EF&selectedIndex=0&itb=1&ajaxhist=0&ajaxserp=0"
     }
   ]
 }
