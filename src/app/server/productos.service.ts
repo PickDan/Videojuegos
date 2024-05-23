@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 export class ProductosService {
 
   constructor(private http:HttpClient) {}
-  private API_PRODUCTOS = "http://localhost:3000/juegos"
+  private API_PRODUCTOS = "http://localhost:9090/productos"
+  //private API_PRODUCTOS = "http://localhost:3000/juegos"
 
   //OBTENER PRODUCTOS
   getProductos(): Observable <any>{
@@ -23,7 +24,7 @@ export class ProductosService {
     return this.http.get(`${this.API_PRODUCTOS}/${producto}`)
   }
   //AGREGAR JUEGOS A LA BASE DE DATOS
-  postProductos(juegos:JSON):Observable<any>{
+  postProductos(juegos:any):Observable<any>{
     return this.http.post(this.API_PRODUCTOS, juegos)
   }
   //ELIMINAR VIDEOJUEGOS
