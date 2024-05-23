@@ -1,77 +1,93 @@
 @if (visualizar == 'admin') {
-<form (ngSubmit)="agregarProducto(formulario)"  #formulario="ngForm">
-  <label>Ingresar ID del videojueo</label>
-  <input type="number" name="id" [(ngModel)]="id">
-  <label>Ingresar el nombre del juego: </label>
-  <input type="text" name="nombre" [(ngModel)]="nombre">
-  <label>Ingresar el precio del juego: </label>
-  <input type="number" name="precio" [(ngModel)]="precio">
-  <label>Ingresar la categoría del juego: </label>
-  <input type="text" name="genero" [(ngModel)]="genero">
-  <label>Ingresar url del juego:</label>
-  <input type="url" name="imagen" [(ngModel)]="imagen">
-  
-  <button type="submit">Guardar revisión</button>
-</form>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Agregar Nuevo Juego</h2>
+    <form (ngSubmit)="agregarProducto(formulario)" #formulario="ngForm" class="border p-4 rounded bg-light">
+      <div class="mb-3">
+        <label for="id" class="form-label">Ingresar ID del videojuego</label>
+        <input type="number" id="id" name="id" [(ngModel)]="id" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Ingresar el nombre del juego</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="precio" class="form-label">Ingresar el precio del juego</label>
+        <input type="number" id="precio" name="precio" [(ngModel)]="precio" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="genero" class="form-label">Ingresar la categoría del juego</label>
+        <input type="text" id="genero" name="genero" [(ngModel)]="genero" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="imagen" class="form-label">Ingresar URL del juego</label>
+        <input type="url" id="imagen" name="imagen" [(ngModel)]="imagen" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-warning w-100">Guardar juego</button>
+    </form>
+  </div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nombre </th>
-      <th>Precio</th>
-      <th>Genero </th>
-      <th>Imagen</th>
-      <th>Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-      @for (juego of juegos; track juego) {
-    <tr>
-      <td>{{juego.id}}</td>
-      <td>{{juego.nombre}}</td>
-      <td>{{juego.precio}}</td>
-      <td>{{juego.genero}}</td>
-      <img src="{{juego.url}}" width="59px" height="100">
-      <td>
-        <button class="btn btn-danger" (click)="delete(juego.id)">Eliminar</button>
-        <button class="btn btn-warning" [routerLink]="['/editar', juego.id]" >Editar</button>
-      </td>
-    </tr>
-    }
-
-  </tbody>
-</table>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Lista de Juegos</h2>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Género</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (juego of juegos; track juego) {
+          <tr>
+            <td>{{ juego.id }}</td>
+            <td>{{ juego.nombre }}</td>
+            <td>{{ juego.precio }}</td>
+            <td>{{ juego.genero }}</td>
+            <td><img src="{{ juego.url }}" alt="{{ juego.nombre }}" class="img-thumbnail" width="59" height="100"></td>
+            <td>
+              <button class="btn btn-danger" (click)="delete(juego.id)">Eliminar</button>
+              <button class="btn btn-warning" [routerLink]="['/editar', juego.id]">Editar</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 
 }@else {
 
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre </th>
-        <th>Precio</th>
-        <th>Genero </th>
-        <th>Imagen</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Lista de Juegos</h2>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Género</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
         @for (juego of juegos; track juego) {
-      <tr>
-        <td>{{juego.id}}</td>
-        <td>{{juego.nombre}}</td>
-        <td>{{juego.precio}}</td>
-        <td>{{juego.genero}}</td>
-        <img src="{{juego.url}}" width="59px" height="100">
-        <td>
-          <button>Agregar al carrito</button>
-          <button [routerLink]="['/detalles', juego.id]">Ver detalles</button>
-        </td>
-      </tr>
-      }
-
-    </tbody>
-  </table>
-}
+          <tr>
+            <td>{{ juego.id }}</td>
+            <td>{{ juego.nombre }}</td>
+            <td>{{ juego.precio }}</td>
+            <td>{{ juego.genero }}</td>
+            <td><img src="{{ juego.url }}" alt="{{ juego.nombre }}" class="img-thumbnail" width="59" height="100"></td>
+            <td>
+              <button class="btn btn-success">Agregar al carrito</button>
+              <button class="btn btn-info" [routerLink]="['/detalles', juego.id]">Ver detalles</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  }
 
